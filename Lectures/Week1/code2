@@ -1,0 +1,11 @@
+find(A, left, right, x) // like find(A, 0, n-1, x)
+    if left > right
+	return False
+    mid = (left + right)/2
+    if a[mid] == x
+	return True
+    if a[mid] < x
+	return find(A, mid+1, right, x)
+
+
+

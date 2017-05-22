@@ -1,0 +1,16 @@
+Power(a, n)  -> return a^n
+//Brute Force
+  for i = 1 to n
+	t = t * a  -> O(1)
+  return t
+
+Recursive_Power(a,n)
+  if (n == 1)
+	return a
+  t = Recursive_Power(a, n/2)
+  if n is even:
+	t = Recursive_Power(a, n/2)
+	return t
+  return t * t * a
+
+

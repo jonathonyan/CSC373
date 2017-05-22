@@ -1,0 +1,20 @@
+MergeSort(A, left, right)
+    if (left < right)
+	mid = (left + right) / 2
+    mergeSort(A, left, mid)
+    mergeSort(A, right, mid)
+    merge(A, left, right, mid)
+
+merge(A, left, right, mid)
+    initialize C
+    index = 0, rIndex = mid+1
+    while (left < mid and rIndex < right)
+	if A[left] < A[rIndex]
+	    C[index+1] = A[left+1]
+	else
+	    C[index+1] = A[rIndex+1]
+    if (lIndex < mid)
+	copy rest of ALeft to C
+    return C
+
+
